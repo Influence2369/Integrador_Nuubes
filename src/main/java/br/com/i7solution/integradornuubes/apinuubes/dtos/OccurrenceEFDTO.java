@@ -89,7 +89,6 @@ public class OccurrenceEFDTO implements Serializable {
     @JsonProperty("departamento")
     private String departamento;
     @JsonProperty("DATA NASCIMENTO")
-    //@JsonFormat(pattern="dd/MM/yyyy")
     private String dtNascimento;
     @JsonProperty("NOME COMPLETO (SÓCIOS/PROPRIETÁRIO)")
     private String nomeCompleto;

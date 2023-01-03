@@ -124,7 +124,7 @@ public class ClienteDtoMock {
 		contato.setCpfCnpj("021.847.311-70");
 		contato.setTipoContato(TipoContato.Socio);
 		contato.setRg("5122509/SSP/GO");
-		contato.setDataNascimento(new Date());
+		contato.setDataNascimento(null);
 		contato.setEndereco("Viela 1° de Abril,SN,Qd. 8-A Lt. 14");
 		contato.setBairro("Setor Tiradentes");
 		contato.setCidade("Aparecida de Goiânia");

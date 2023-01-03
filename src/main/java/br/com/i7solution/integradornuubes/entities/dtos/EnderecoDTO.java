@@ -29,9 +29,9 @@ public class EnderecoDTO implements Serializable {
                 "  \"idCliente\": \"" + idCliente + "\",\n" +
                 "  \"numero\": \"" + numero + "\",\n" +
                 "  \"cep\": \"" + cep + "\",\n" +
-                "  \"bairro\": \"" + bairro + "\",\n" +
-                "  \"complemento\": \"" + complemento + "\",\n" +
-                "  \"pontoRefer\": \"" + pontoRefer + "\",\n" +
+                "  \"bairro\": \"" + bairro.replaceAll("\\r\n|\n", "") + "\",\n" +
+                "  \"complemento\": \"" + complemento.replaceAll("\\r\n|\n", "") + "\",\n" +
+                "  \"pontoRefer\": \"" + pontoRefer.replaceAll("\\r\n|\n", "") + "\",\n" +
                 "  \"uf\": \"" + uf + "\",\n" +
                 "  \"cidade\": \"" + cidade + "\",\n" +
                 "  \"codigoIbge\": \"" + codigoIbge + "\",\n" +

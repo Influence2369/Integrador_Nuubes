@@ -65,10 +65,11 @@ public class ClienteClient {
             } else {
                 result.setError("Erro: " + response.getStatus() + " - " + response.getStatusText());
             }
+            return result;
         } catch (UnirestException e) {
             log.warn("[getClientePorCpfCnpj]: Erro -> " + e.getMessage());
         }
-        return result;
+        return null;
     }
 
     public ClienteDTO[] getClientesPorDiasCadastro(Integer qtDiasCad) throws IOException {

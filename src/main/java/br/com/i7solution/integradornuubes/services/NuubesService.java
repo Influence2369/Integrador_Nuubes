@@ -292,7 +292,7 @@ public class NuubesService {
                                         var contato = new ContatoDTO();
                                         contato.setNome(cliEF[0].getNomeCompleto().trim());
                                         contato.setRg(cliEF[0].getRg().trim() + "/" + cliEF[0].getOrgaoExp().trim());
-                                        contato.setDataNascimento(Ferramentas.stringToDate(cliEF[0].getDtNascimento(), "dd/MM/yyyy"));
+                                        contato.setDataNascimento(cliEF[0].getDtNascimento());
                                         contato.setCpfCnpj(cliEF[0].getCpf().trim());
                                         var enderecoContato = cliEF[0].getEndereco().trim() + "," + cliEF[0].getNrEndereco().trim() + "," + cliEF[0].getComplemento().trim();
                                         if (enderecoContato.trim().length() > 40) {
@@ -467,6 +467,8 @@ public class NuubesService {
                     var rca2 = new RcaDTO();
                     rca1.setOrdem(1L);
                     rca2.setOrdem(2L);
+                    rca1.setNome(null);
+                    rca2.setNome(null);
 
                     switch (result.getEnderecos()[x].getUf().toUpperCase()) {
                         case "BA":
@@ -482,23 +484,9 @@ public class NuubesService {
 
                     var rcas = new RcaDTO[]{rca1, rca2};
                     result.setVendedores(rcas);
-
-                    if (result.getTipoPessoa().equalsIgnoreCase("Física")) {
-                        result.setConsumidorFinal(true);
-                        result.setContribuinte(false);
-                    } else {
-                        result.setConsumidorFinal(false);
-                        result.setContribuinte(true);
-                    }
-
-                    if (result.getInscricaoEstadual().equalsIgnoreCase("ISENTO")) {
-                        result.setConsumidorFinal(true);
-                        result.setContribuinte(false);
-                    } 
                     
-                    result.setConsumidorFinal(result.getInscricaoEstadual().equalsIgnoreCase("ISENTO"));
-                    result.setContribuinte(!result.getInscricaoEstadual().equalsIgnoreCase("ISENTO"));
-
+                    result.setConsumidorFinal(false);
+                    result.setContribuinte(true);
                     result.setAcessarPlanoPagamentosNegociados(true);
                 }
             }
@@ -517,9 +505,9 @@ public class NuubesService {
                     var filial = new FilialDTO();
                     switch (result.getEnderecos()[x].getUf().toUpperCase()) {
                         case "TO":
-                            result.setIsentoIcms(true);
+                            result.setIsentoIcms(false);
                             result.setIsentoIpi(true);
-                            result.setCalculaSt(false);
+                            result.setCalculaSt(true);
                             filial.setId("3");
                             break;
                         case "GO":
@@ -535,15 +523,9 @@ public class NuubesService {
                             filial.setId("6");
                             break;
                         case "MT":
-                            if (Ferramentas.verificarTipoFJ(result.getCpfCnpj()).equalsIgnoreCase("F")) {
-                                result.setIsentoIcms(true);
-                                result.setIsentoIpi(true);
-                                result.setCalculaSt(false);
-                            } else {
-                                result.setIsentoIcms(false);
-                                result.setIsentoIpi(false);
-                                result.setCalculaSt(true);
-                            }
+                            result.setIsentoIcms(false);
+                            result.setIsentoIpi(false);
+                            result.setCalculaSt(true);
                             filial.setId("1");
                             break;
                         case "MG":
@@ -553,15 +535,15 @@ public class NuubesService {
                             filial.setId("5");
                             break;
                         case "DF":
-                            result.setIsentoIcms(true);
+                            result.setIsentoIcms(false);
                             result.setIsentoIpi(true);
-                            result.setCalculaSt(false);
+                            result.setCalculaSt(true);
                             filial.setId("2");
                             break;
                         case "PA":
                             result.setIsentoIcms(false);
                             result.setIsentoIpi(true);
-                            result.setCalculaSt(false);
+                            result.setCalculaSt(true);
                             filial.setId("7");
                             break;
                         default:

@@ -107,6 +107,7 @@ public class ClienteDTO implements Serializable {
         sb.append("  \"tipoPessoa\": \"" + this.tipoPessoa + "\",\n");
         sb.append("  \"inscricaoEstadual\": \"" + this.inscricaoEstadual + "\",\n");
         sb.append("  \"inscricaoMunicipal\": \"" + this.inscricaoMunicipal + "\",\n");
+        sb.append("  \"ativo\": \"" + this.ativo + "\",\n");
         sb.append("  \"email\": \"" + this.email + "\",\n");
         sb.append("  \"telefoneCelular\": \"" + this.telefoneCelular + "\",\n");
         sb.append("  \"telefoneFixo\": \"" + this.telefoneFixo + "\",\n");

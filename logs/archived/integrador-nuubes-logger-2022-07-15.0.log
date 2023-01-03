@@ -1,0 +1,9 @@
+2022-07-15 13:54:19,801 INFO org.springframework.boot.StartupInfoLogger [main] Starting IntegradorNuubesApplicationTests using Java 11.0.15 on LAPTOP-JQ78BFF6 with PID 12992 (started by Programador1 in C:\PastaDeTrabalho\Integrador_Nuubes)
+2022-07-15 13:54:19,807 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-07-15 13:54:21,111 INFO org.springframework.boot.StartupInfoLogger [main] Started IntegradorNuubesApplicationTests in 1.816 seconds (JVM running for 2.978)
+2022-07-15 16:58:22,999 INFO org.springframework.boot.StartupInfoLogger [main] Starting IntegradorNuubesApplicationTests using Java 11.0.15 on LAPTOP-JQ78BFF6 with PID 7136 (started by Programador1 in C:\PastaDeTrabalho\Integrador_Nuubes)
+2022-07-15 16:58:23,005 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-07-15 16:58:24,522 INFO org.springframework.boot.StartupInfoLogger [main] Started IntegradorNuubesApplicationTests in 2.297 seconds (JVM running for 4.785)
+2022-07-15 17:10:32,109 INFO org.springframework.boot.StartupInfoLogger [main] Starting IntegradorNuubesApplicationTests using Java 11.0.15 on LAPTOP-JQ78BFF6 with PID 7488 (started by Programador1 in C:\PastaDeTrabalho\Integrador_Nuubes)
+2022-07-15 17:10:32,113 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-07-15 17:10:33,957 INFO org.springframework.boot.StartupInfoLogger [main] Started IntegradorNuubesApplicationTests in 2.34 seconds (JVM running for 3.568)
